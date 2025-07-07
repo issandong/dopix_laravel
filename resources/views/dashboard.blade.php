@@ -14,7 +14,7 @@
         {{ session('success') }}
     </div>
 @endif
-<div class="container">
+<div class="container ">
   <div class="welcome">Bienvenue, {{ Auth::user()->name ?? 'Jean' }} !</div>
   <a class="cta-btn" href="{{ route('verification') }}">Vérifier un médicament</a>
   <h2>Historique récent</h2>

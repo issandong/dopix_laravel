@@ -140,7 +140,7 @@
     /* Responsive styles */
     /* Tablet */
     @media(max-width: 900px) {
-      .container { margin: 24px 8px; padding: 18px; }
+      .container {  padding: 18px; }
       header { padding: 18px 10px 10px 10px;}
     }
     /* Mobile */
@@ -294,7 +294,7 @@ label {
 </head>
 <body>
   @include('partials.header')
-  <main>
+  <main class=" px-4 sm:px-6 lg:px-8">
     @yield('content')
   </main>
    @include('partials.footer')
