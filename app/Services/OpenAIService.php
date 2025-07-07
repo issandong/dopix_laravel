@@ -11,7 +11,12 @@ class OpenAIService
 
     public function __construct()
     {
-        $this->apiKey = env('OPENAI_API_KEY');
+        $this->apiKey = config('services.openai.key');
+
+        if (!$this->apiKey) {
+            throw new \Exception("Clé OpenAI manquante. Vérifie ton .env");
+        }
+
         $this->httpClient = new HttpClient([
             'base_uri' => 'https://api.openai.com/',
             'headers' => [
@@ -20,6 +25,7 @@ class OpenAIService
             ],
         ]);
     }
+
 
     /**
      * Analyse une image en base64 via OpenAI Vision.
