@@ -17,9 +17,12 @@
         </div>
 
         <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Email Password Reset Link') }}
-            </x-primary-button>
+             <button type="submit"
+                class="w-full bg-blue-600  text-white font-bold py-2 px-4 rounded-lg"  style="background-color: #1976D2;"
+                 onmouseover="this.style.backgroundColor='#1565c0';"
+        onmouseout="this.style.backgroundColor='#1976D2';">
+                Renitialiser le mot de passe
+            </button>
         </div>
     </form>
 </x-guest-layout>
